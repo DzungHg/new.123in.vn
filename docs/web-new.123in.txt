@@ -1,0 +1,18 @@
+==22/12/2019== làm như sau
+2). Sửa config
+1). Xuất data caan.com.vn ra, xóa  ad123in_123in2, nhập caan.com.vn vô
+===web new2.123in.vn trước đó
+Database:
+Web FW: ProcessWire
+
+admin/Admin@1234
+
+Database:
+Database:	ad123in_123in2
+Host:		localhost
+Username:	ad123in_123in
+Password:	2zgfjteK
+
+Host trên VDC
+DM: new2.123in.vn
+ad123in/2zgfjteK
