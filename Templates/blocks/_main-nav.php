@@ -5,16 +5,16 @@
                                             <a href="/">Trang Chủ</a>
                                         </li>
                                         <li>
-                                            <a href="/kinh-doanh">Kinh Doanh</a>
+                                            <a href="/dich-vu">Dịch Vụ</a>
                                         </li>
                                         <li>
-                                            <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">Công Ty</a>
+                                            <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">123in</a>
                                             <div class="uk-navbar-dropdown">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                    <li><a href="/cong-ty/ve-ca-an">Về Ca An</a></li>
+                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>
                                 
-                                                    <li><a href="/cong-ty/tuyen-dung">Tuyển Dụng</a></li>
-                                                    <li><a href="/cong-ty/lien-he">Liên Hệ</a></li>
+                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>
+                                                    <li><a href="/123in/lien-he">Liên Hệ</a></li>
                                                 </ul>
                                             </div>
                                         </li>

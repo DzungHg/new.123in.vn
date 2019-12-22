@@ -44,7 +44,7 @@ a:hover {
  */
 a,
 .uk-link {
-    color: #fda924;
+    color: #00B0F0;
     text-decoration: none;
     cursor: pointer;
 }
@@ -1808,8 +1808,8 @@ button.uk-icon:not(:disabled) {
  */
 .uk-form-success,
 .uk-form-success:focus {
-    color: #32d296;
-    border-color: #32d296;
+    color: #ECE711;
+    border-color: #ECE711;
 }
 
 /*
@@ -2283,7 +2283,7 @@ select.uk-form-width-xsmall {
  * Primary
  */
 .uk-button-primary {
-    background-color: #fda924;
+    background-color: #00B0F0;
     color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -2438,7 +2438,7 @@ select.uk-form-width-xsmall {
     line-height: 1.5;
     background: none;
     /* 2 */
-    color: #fda924;
+    color: #00B0F0;
 }
 
 /* Hover + Focus */
@@ -3886,7 +3886,7 @@ select.uk-form-width-xsmall {
  */
 .uk-alert-success {
     background: #edfbf6;
-    color: #32d296;
+    color: #ECE711;
 }
 
 /*
@@ -3985,7 +3985,7 @@ select.uk-form-width-xsmall {
  * Success
  */
 .uk-label-success {
-    background-color: #32d296;
+    background-color: #ECE711;
     color: #fff;
 }
 
@@ -3993,7 +3993,7 @@ select.uk-form-width-xsmall {
  * Warning
  */
 .uk-label-warning {
-    background-color: #fda924;
+    background-color: #00B0F0;
     color: #fff;
 }
 
@@ -4116,7 +4116,7 @@ select.uk-form-width-xsmall {
     font-weight: 800;
     font-size: 12px;
     text-transform: uppercase;
-    color: #fda924;
+    color: #00B0F0;
 }
 
 .uk-comment-header {
@@ -4629,7 +4629,7 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-nav-primary>li.uk-active>a {
-    color: #fda924;
+    color: #00B0F0;
 }
 
 /*
@@ -4858,8 +4858,8 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-navbar-nav>li.uk-active>a {
-    color: #fda924;
-    border-bottom: 1px solid #fda924;
+    color: #00B0F0;
+    border-bottom: 1px solid #00B0F0;
     position: relative;
     padding-bottom: 1px;
     bottom: -1px;
@@ -5645,7 +5645,7 @@ ul.uk-nav-sub {
 .uk-dotnav>*> :focus {
     background-color: rgba(143, 143, 143, 0.6);
     outline: none;
-    background-color: #fda924;
+    background-color: #00B0F0;
 }
 
 /* OnClick */
@@ -5657,7 +5657,7 @@ ul.uk-nav-sub {
 /* Active */
 .uk-dotnav>.uk-active>* {
     background-color: rgba(143, 143, 143, 0.6);
-    background-color: #fda924;
+    background-color: #00B0F0;
 }
 
 /* Modifier: 'uk-dotnav-vertical'
@@ -5799,7 +5799,7 @@ ul.uk-nav-sub {
     height: 20px;
     border-radius: 6px;
     background-size: 50%;
-    background-color: #fda924;
+    background-color: #00B0F0;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20fill%3D%22%23333333%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M416%20208H272V64c0-17.67-14.33-32-32-32h-32c-17.67%200-32%2014.33-32%2032v144H32c-17.67%200-32%2014.33-32%2032v32c0%2017.67%2014.33%2032%2032%2032h144v144c0%2017.67%2014.33%2032%2032%2032h32c17.67%200%2032-14.33%2032-32V304h144c17.67%200%2032-14.33%2032-32v-32c0-17.67-14.33-32-32-32z%22%2F%3E%3C%2Fsvg%3E");
     content: "";
     margin-left: 10px;
@@ -7059,7 +7059,7 @@ ul.uk-nav-sub {
  * Success
  */
 .uk-notification-message-success {
-    color: #32d296;
+    color: #ECE711;
 }
 
 /*
@@ -8843,7 +8843,7 @@ ul.uk-nav-sub {
 }
 
 .uk-text-success {
-    color: #32d296 !important;
+    color: #ECE711 !important;
 }
 
 .uk-text-warning {

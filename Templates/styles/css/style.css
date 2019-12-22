@@ -19,7 +19,7 @@ header .uk-section {
 header .uk-container::before {
     width: 100%;
     content: "";
-    border-top: 5px solid #fda924;
+    border-top: 5px solid #00B0F0;
     margin-top: -5px;
 }
 
@@ -34,7 +34,7 @@ header .in-header-phone {
 }
 
 header .in-header-phone h5 {
-    color: #fda924;
+    color: #00B0F0;
 }
 
 header .in-header-login {
@@ -64,7 +64,7 @@ header .in-header-login {
 .in-sticky .in-header-logo {
     width: 42px;
     height: 42px;
-    background: url(../img/logo-alt.svg) no-repeat;
+    background: url(../images/logo-alt.svg) no-repeat;
     margin-top: 13px;
 }
 
@@ -107,7 +107,7 @@ footer .uk-container {
 footer .uk-container::before {
     width: 100%;
     content: "";
-    border-top: 3px solid #fda924;
+    border-top: 3px solid #00B0F0;
 }
 
 footer .in-footer-logo img {
@@ -159,7 +159,7 @@ footer .in-footer-socials a {
     height: 110px;
     margin-bottom: -110px;
     content: "";
-    background: url(../img/vilisya-ornament.svg) no-repeat;
+    background: url(../images/vilisya-ornament.svg) no-repeat;
     left: 65px;
     top: 18px;
     position: absolute;
@@ -170,7 +170,7 @@ footer .in-footer-socials a {
     height: 110px;
     margin-bottom: -110px;
     content: "";
-    background: url(../img/vilisya-ornament.svg) no-repeat;
+    background: url(../images/vilisya-ornament.svg) no-repeat;
     right: 65px;
     bottom: 51px;
     position: absolute;
@@ -189,7 +189,7 @@ footer .in-footer-socials a {
 }
 
 .in-slide-container .uk-slideshow-items .in-slide-text h2 {
-    color: #fda924;
+    color: #00B0F0;
 }
 
 .in-slide-container .uk-slideshow-items .in-slide-image {
@@ -216,7 +216,7 @@ footer .in-footer-socials a {
 }
 
 .in-breadcrumb h2 {
-    color: #fda924;
+    color: #00B0F0;
     float: right;
 }
 
@@ -353,7 +353,7 @@ footer .in-footer-socials a {
     width: 85px;
     height: 85px;
     content: "";
-    background: url(../img/vilisya-ornament.svg) no-repeat;
+    background: url(../images/vilisya-ornament.svg) no-repeat;
     margin-right: -90px;
     top: 30px;
     left: 0px;
@@ -405,11 +405,11 @@ footer .in-footer-socials a {
 }
 
 .in-pricing.in-pricing-highlight .uk-card-header {
-    border-top: 4px solid #fda924;
+    border-top: 4px solid #00B0F0;
 }
 
 .in-pricing.in-pricing-highlight .uk-card-header .uk-label {
-    background-color: #fda924;
+    background-color: #00B0F0;
     color: #333;
 }
 
@@ -449,7 +449,7 @@ footer .in-footer-socials a {
 }
 
 .in-testimoni-slider .in-customer-card blockquote {
-    border-left: 3px solid #fda924;
+    border-left: 3px solid #00B0F0;
     width: 66%;
     padding-left: 20px;
 }
@@ -571,7 +571,7 @@ footer .in-footer-socials a {
 }
 
 .in-blog p.uk-article-meta span.uk-label {
-    background-color: #fda924;
+    background-color: #00B0F0;
     font-size: 11px;
     text-transform: uppercase;
     position: relative;
@@ -689,7 +689,7 @@ footer .in-footer-socials a {
 }
 
 .in-widget-popular li a span {
-    color: #fda924;
+    color: #00B0F0;
 }
 
 .in-widget-archive li a span.uk-label {
@@ -702,7 +702,7 @@ footer .in-footer-socials a {
 }
 
 .in-widget-archive li a:hover span.uk-label {
-    background-color: #fda924;
+    background-color: #00B0F0;
 }
 
 .in-widget-tag a.uk-label {
@@ -718,7 +718,7 @@ footer .in-footer-socials a {
 .in-widget-category li a:hover,
 .in-widget-popular li a:hover,
 .in-widget-archive li a:hover {
-    color: #fda924;
+    color: #00B0F0;
 }
 
 /* Indonez plyr.io */
@@ -778,7 +778,7 @@ a:hover.in-totop {
 
 /* Indonez image shadow */
 .in-img-shadow {
-    box-shadow: 20px 20px 0px 0px #fda924;
+    box-shadow: 20px 20px 0px 0px #00B0F0;
 }
 
 /* uk-accordion remove border bottom */

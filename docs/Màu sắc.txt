@@ -1,4 +1,9 @@
-Xanh: 0 124 195 #007CC3
+Logo Tone Đen hoàn toàn.
+
+Xanh chính đã đổi: 0 176 240 #00B0F0
+Xanh lá phụ mới: #ECE711
+Cam  phụ cũ: #fda924
+
 Đen: 70% #555555
 Xanh tươi hơn: #00A2FF
 

@@ -6,16 +6,16 @@
                                     <button class="uk-modal-close-full uk-close-large" type="button" data-uk-icon="icon: fa-times; ratio: 0.040"></button>
                                     <div class="uk-width-large uk-padding-large">
                                         <ul class="uk-nav-primary uk-nav-parent-icon in-margin-negative-top@s" data-uk-nav>
-                                            <li ><a href="index.html">Home</a>
+                                            <li ><a href="/">Trang Chủ</a>
                                             </li>
-                                            <li ><a href="/kinh-doanh">Kinh Doanh</a>
+                                            <li ><a href="/dich-vu">Dịch Vụ</a>
                                             </li>
-                                            <li class="uk-parent"><a href="#">Công Ty</a>
+                                            <li class="uk-parent"><a href="#">123in</a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/cong-ty/ve-ca-an">Về Ca An</a></li>
+                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>
                                                   
-                                                    <li><a href="/cong-ty/tuyen-dung">Tuyển Dụng</a></li>
-                                                    <li><a href="/cong-ty/lien-he">Liên hệ</a></li>
+                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>
+                                                    <li><a href="/123in/lien-he">Liên hệ</a></li>
                                                 </ul>
                                             </li>
                                           
