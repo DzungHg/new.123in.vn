@@ -1,0 +1,1 @@
+2019-12-11 19:27:33	admin	http://new3.caan.com.vn/cp/module/	SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'InputfieldTextareas' for key 'class' (in /wire/core/Modules.php line 1879)

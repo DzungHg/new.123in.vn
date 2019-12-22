@@ -1,0 +1,4 @@
+2019-12-11 13:26:44	guest	http://new3.caan.com.vn/	Maintenance/Copy new version of source file to target file: /site/templates/_main.php => /site/assets/cache/FileCompiler/site/templates/_main.php
+2019-12-13 13:27:20	admin	http://new3.caan.com.vn/cp/setup/template/navJSON/	Maintenance/Remove target file: /site/assets/cache/FileCompiler/site/templates/bussiness-list-page.php
+2019-12-20 00:33:44	admin	http://caan.com.vn/cp/module/?reset=1	Compiled file: /site/modules/WireMailSmtp/WireMailSmtp.module
+2019-12-20 00:33:44	admin	http://caan.com.vn/cp/module/?reset=1	Compiled file: /site/modules/WireMailSmtp/WireMailSmtpConfig.php

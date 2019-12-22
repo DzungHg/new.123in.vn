@@ -23,8 +23,8 @@
                 autoplay: true,
                 autoplayInterval: 7000,
                 animation: 'fade',
-                minHeight: 310,
-                maxHeight: 420
+                minHeight: 300,
+                maxHeight: 500
             });
         },
         //----------- 2. Active Menu Jquery -----------
