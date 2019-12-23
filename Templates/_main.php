@@ -19,7 +19,7 @@ urls()->set('jquery', 'wire/modules/Jquery/JqueryCore/JqueryCore.js');
 <head id='html-head'>
 	<!-- Standard Meta -->
     <meta charset="utf-8">
-    <meta name="description" content="<?=page()->summary?>">
+    <meta name="mota" content="<?=page()->summary?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#e47d2e"/> 
 	<!-- Standard Meta -->
