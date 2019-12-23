@@ -18,7 +18,9 @@
                                                     <li><a href="/123in/lien-he">Liên hệ</a></li>
                                                 </ul>
                                             </li>
-                                          
+                                            <li>
+                                            <a href="/blog">Blog</a>
+                                            </li>
                                             <li class="uk-parent"><a href="#">Tài Nguyên</a>
                                                 <ul class="uk-nav-sub">
                                                   
@@ -26,6 +28,7 @@
                                                 <li><a href="/tai-nguyen/ho-so-nang-luc">Hồ Sơ Năng Lực</a></li>  
                                                 </ul>
                                             </li>
+                                           
                                         </ul>
                                         <!--<a href="signin.html" class="uk-button uk-button-primary uk-border-rounded uk-align-center">Sign in</a> -->
                                     </div>

@@ -8,6 +8,51 @@ namespace ProcessWire;
  */
 
 /** @var ProcessWire $wire */
+/**
+ * Render danh sách blog tại trang blog
+ * $pageLimit là số blog hiển thị trên trang sau
+ */
+function vcRenderBlogs(PageArray $blogs, $currCateTitle)
+{
+    $out = '';
+    $headImageLink = '';    
+    $bodyTeasing = '';
+    foreach ($blogs as $blog)
+    {
+        if ($blog->images->first())
+        {
+            $headImageLink = $blog->images->first()->url;
+        }
+
+        $bodyTeasing = explode('</p>', $blog->body); //Tách các đoạn thành bản dãy
+        $bodyTeasing = reset($bodyTeasing) . ' '; //Lấy item đầu tiên của bản dãy
+
+        $out .= "  <article class='uk-article in-blog'>
+        <p class='uk-article-meta'><span class='uk-label uk-label-warning uk-visible@m'>$currCateTitle</span>$blog->date &nbsp;&nbsp; | &nbsp;&nbsp; Bởi 123in</p>
+        <h3 class='uk-article-title uk-margin-small-top'><a class='uk-link-reset' href='$blog->url'>$blog->title</a></h3>
+        <img class='uk-margin-bottom' src='$headImageLink' data-src='$headImageLink' alt='' data-width data-height data-uk-img>
+        <div class='uk-margin-large-left'>
+            <div class='uk-margin-small-bottom'>
+                <a href='' class='uk-icon-button twitter uk-margin-small-right' data-uk-icon='icon: twitter'></a>
+                <a href='' class='uk-icon-button facebook uk-margin-small-right' data-uk-icon='icon: facebook'></a>
+                <a href='' class='uk-icon-button linkedin uk-margin-small-right' data-uk-icon='icon: linkedin'></a>
+                <a href='' class='uk-icon-button' data-uk-icon='icon: fa-envelope; ratio: 0.028'></a>
+            </div>
+            <p>$bodyTeasing.</p>
+            <div>
+                <a href='$blog->url' class='uk-button uk-button-link uk-margin-right'>Continue Reading <span data-uk-icon='icon: fa-arrow-right; ratio: 0.027'></span></a>
+            </div>
+        </div>
+        </article>";
+       
+    
+    }
+
+    return $out;
+}
+ /**
+  * Render bảng giá
+  */
 function vcRenderPriceTable(Page $page)
 {
     $out = '';

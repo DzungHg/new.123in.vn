@@ -12,13 +12,14 @@
                                             <div class="uk-navbar-dropdown">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                                     <li><a href="/123in/ve-123in">Về 123in</a></li>
-                                
-                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>
                                                     <li><a href="/123in/lien-he">Liên Hệ</a></li>
+                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>                                                    
                                                 </ul>
                                             </div>
                                         </li>
-                                       
+                                        <li>
+                                            <a href="/blog">Blog</a>
+                                        </li>
                                         <li>
                                             <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">Tài Nguyên</a>
                                             <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
@@ -39,6 +40,7 @@
                                                 </div>
                                             </div>
                                         </li>
+                                       
                                     </ul>
                                 </div>
                                 <div class="uk-navbar-right">
