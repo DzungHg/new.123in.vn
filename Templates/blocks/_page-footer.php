@@ -1,3 +1,4 @@
+<?php use function ProcessWire\pathToAsset; ?>
 <footer>
         <div class="uk-section uk-padding-remove-top">
             <div class="uk-container">
@@ -5,7 +6,7 @@
                 <div class="uk-grid">
                     <div class="uk-width-1-1 uk-width-1-2@m">
                         <div class="in-footer-logo">
-                            <img src="img/logo.svg" data-src="img/logo.svg" width="125" height="12" alt="logo" data-uk-img>
+                            <img src="<?=pathToAsset() ?>images/logo.svg" data-src="<?=pathToAsset() ?>images/logo.svg" width="125" height="12" alt="logo" data-uk-img>
                             <p><?=$pageSettings->setting_copy_right->text_line_part_01?> &copy; <?=$pageSettings->setting_copy_right->text_line_part_02?></p>
                         </div>               
                     </div>
@@ -30,3 +31,4 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
         <script src="<?=$urls->templates?>styles/js/config.js"></script>
         <script src="<?=$urls->templates?>styles/js/vendor.js"></script>
+        <?=$pageSettings->setting_script_at_bottom?>

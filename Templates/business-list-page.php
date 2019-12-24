@@ -103,10 +103,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-width-1-1 uk-width-expand@m in-margin-bottom@s">            
-                            <p class="uk-text-lead"><?=$page->business_page_cta->head_line?></p>
-                            <p><?=$page->business_page_cta->short_desc?></p>
-                            <a href="<?=$page->business_page_cta->link_url?>" class="uk-button uk-button-link uk-margin-small-top uk-margin-right"><?=$page->business_page_cta->link_name?> <span data-uk-icon="icon: fa-arrow-right; ratio:0.028"></span></a>
+                        <div class="uk-width-1-1 uk-width-expand@m in-margin-bottom@s"> 
+                             <!-- kêu gọi xem gì đó -->
+                            <aside>
+                                <?=$page->sidebar?>
+                            </aside>  
+                            <!-- Hết: kêu gọi xem gì đó -->
+                            <!-- form Tư vấn báo giá -->
+                            <aside class="in-blog-sidebar uk-margin-medium-bottom">
+                                <h5 class='uk-text-uppercase uk-margin-remove-bottom'>Tư vấn - Báo Giá</h5>
+                                <?php echo $forms->embed('tu-van-bao-gia'); ?>
+                            </aside>
+                            <!-- Hết form Tư vấn báo giá -->    
+                                
                         </div>   
                     </div>
                     <!-- grid content end -->                                  

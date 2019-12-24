@@ -48,18 +48,15 @@ use function ProcessWire\getImageUrlFromImages; ?>
             </div>
                         <div class="uk-width-1-1 uk-width-1-2@m">
                             <div class="uk-grid uk-grid-small uk-child-width-1-2 uk-text-center" data-uk-grid>
-                            <?php //gắn 4 dịch vụ tiêu biểu
+                            <?php //gắn logo khách hàng tối đa 4 con
                                 $out = '';
-                                $imageLink = '';                                
+                                $imageLink = '';
                                 foreach ($page->field_repeater_matrix as $item) {
-                                    if($item->type == '4feature_service') {
-                                        if ($item->images->count())
-                                        {
-                                            $imageLink = $item->images->first()->url;
-                                        }
+                                    if($item->type == 'customer_logo') {
+                                        $imageLink = getImageUrlFromImages($page, $item->image_name);
                                         $out .= "<div>
                                         <div class='in-customer-card uk-card uk-card-body'>
-                                            <a href='$item->link_url'><img src='$imageLink' data-src='$imageLink' alt='Dịch vụ tiêu biểu' data-width data-height data-uk-img></a>
+                                            <img src='$imageLink' data-src='$imageLink' alt='$item->image_alt_text' data-width data-height data-uk-img>
                                         </div>
                                     </div>";
                                     }

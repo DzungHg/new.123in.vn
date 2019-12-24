@@ -13,6 +13,13 @@
                               <?=$page->body?>
                         </div>
                         <div class="uk-width-1-1 uk-width-1-3@m in-margin-large-top@s">
+                            <!-- form Tư vấn báo giá -->
+                            <aside class="in-blog-sidebar uk-margin-medium-bottom">
+                            <h5 class='uk-text-uppercase uk-margin-remove-bottom'>Tư vấn - Báo Giá</h5>
+                                <?php echo $forms->embed('tu-van-bao-gia'); ?>
+                            
+                            <!-- Hết form Tư vấn báo giá -->
+                            </aside>
                             <!-- sidebar và trang con kèm  -->
                             <aside class="in-blog-sidebar uk-margin-medium-bottom">
                                 <?=$page->sidebar?>

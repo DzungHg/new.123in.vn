@@ -12,10 +12,9 @@
                                             </li>
                                             <li class="uk-parent"><a href="#">123in</a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>
-                                                  
-                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>
-                                                    <li><a href="/123in/lien-he">Liên hệ</a></li>
+                                                    <li><a href="/123in/lien-he">Liên Hệ</a></li>
+                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>                                                  
+                                                    <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>                                                   
                                                 </ul>
                                             </li>
                                             <li>

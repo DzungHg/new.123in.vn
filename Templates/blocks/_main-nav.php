@@ -11,8 +11,8 @@
                                             <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">123in</a>
                                             <div class="uk-navbar-dropdown">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>
                                                     <li><a href="/123in/lien-he">Liên Hệ</a></li>
+                                                    <li><a href="/123in/ve-123in">Về 123in</a></li>                                                    
                                                     <li><a href="/123in/tuyen-dung">Tuyển Dụng</a></li>                                                    
                                                 </ul>
                                             </div>

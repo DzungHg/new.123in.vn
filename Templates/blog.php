@@ -41,13 +41,13 @@
                      </div>
                         <div class="uk-width-1-1 uk-width-1-3@m in-margin-large-top@s">
                             <!-- sidebar categories  -->
-                             <!-- sidebar danh mục  -->
+                           
                              <aside class="in-blog-sidebar uk-margin-medium-bottom">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <h5 class="uk-text-uppercase uk-margin-remove-bottom">Danh mục</h5>
                                         <ul class="uk-list uk-list-divider in-widget-category">
-                                            <?php //Nếu có trang con thì list
+                                            <?php 
                                             $out = '';
                                             $categories = pages()->get('/categories/');
                                             foreach ($categories->children() as $item)
