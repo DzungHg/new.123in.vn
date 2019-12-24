@@ -9,6 +9,7 @@
 	$posts = page()->children('limit=10');
 	echo ukBlogPosts($posts); 
 	?>
+	
 </div>
 
 <aside id='sidebar'>

@@ -12,13 +12,22 @@ namespace ProcessWire;
  * Render danh sách blog tại trang blog
  * $pageLimit là số blog hiển thị trên trang sau
  */
-function vcRenderBlogs(PageArray $blogs, $currCateTitle)
+function vcRenderBlogs(PageArray $blogs)
 {
     $out = '';
     $headImageLink = '';    
     $bodyTeasing = '';
+    $catesOut = '';
+
     foreach ($blogs as $blog)
     {
+        if(!$blogs->count) {
+            if(input()->pageNum > 1) {
+                // redirect to first pagination if accessed at an out-of-bounds pagination
+                session()->redirect(page()->url);
+            }
+            return '';
+        }
         if ($blog->images->first())
         {
             $headImageLink = $blog->images->first()->url;
@@ -26,9 +35,13 @@ function vcRenderBlogs(PageArray $blogs, $currCateTitle)
 
         $bodyTeasing = explode('</p>', $blog->body); //Tách các đoạn thành bản dãy
         $bodyTeasing = reset($bodyTeasing) . ' '; //Lấy item đầu tiên của bản dãy
+        
+        $catesOut = $blog->get('categories')->each( 
+		"<a class='uk-button uk-button-text' href='{url}'><span class='uk-label uk-label-warning uk-visible@m'>{title}</span></a>"
+	    );
 
         $out .= "  <article class='uk-article in-blog'>
-        <p class='uk-article-meta'><span class='uk-label uk-label-warning uk-visible@m'>$currCateTitle</span>$blog->date &nbsp;&nbsp; | &nbsp;&nbsp; Bởi 123in</p>
+        <p class='uk-article-meta'>$catesOut $blog->date &nbsp;&nbsp; | &nbsp;&nbsp; Bởi 123in</p>
         <h3 class='uk-article-title uk-margin-small-top'><a class='uk-link-reset' href='$blog->url'>$blog->title</a></h3>
         <img class='uk-margin-bottom' src='$headImageLink' data-src='$headImageLink' alt='' data-width data-height data-uk-img>
         <div class='uk-margin-large-left'>
@@ -40,7 +53,7 @@ function vcRenderBlogs(PageArray $blogs, $currCateTitle)
             </div>
             <p>$bodyTeasing.</p>
             <div>
-                <a href='$blog->url' class='uk-button uk-button-link uk-margin-right'>Continue Reading <span data-uk-icon='icon: fa-arrow-right; ratio: 0.027'></span></a>
+                <a href='$blog->url' class='uk-button uk-button-link uk-margin-right'>Đọc tiếp ... <span data-uk-icon='icon: fa-arrow-right; ratio: 0.027'></span></a>
             </div>
         </div>
         </article>";
