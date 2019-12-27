@@ -25,14 +25,17 @@
                                     }
                                     $out .= "<div>
                                         <div class='uk-card uk-card-default uk-card-small'>
-                                            <div class='uk-card-media-top'>
-                                                <img class='uk-margin-small-top uk-margin-remove-bottom' src='$deptImageLink' data-src='$deptImageLink' alt='dept' data-uk-img>
-                                            </div>
+                                            <header class='uk-text-center'>
+                                                <h4>$item->headline</h4>
+                                                <div class='uk-card-media-top'>
+                                                    <img class='uk-margin-small-top uk-margin-remove-bottom' src='$deptImageLink' data-src='$deptImageLink' alt='dept' data-uk-img>
+                                                </div>
+                                            </header>
                                             <div class='uk-card-body uk-text-left'>                                          
                                                 $item->text_area_ck
                                             </div>                                        
                                             <div class='uk-card-footer'>
-                                                <header class='uk-text-center' >
+                                                <header class='uk-text-center'>
                                                     <h4>Người nhận thông tin</h4>
                                                     <div class='uk-card-media-top'>
                                                         <img class='uk-border-circle uk-margin-small-top uk-margin-remove-bottom' src='$personImageLink' data-src='$personImageLink' width='80' height='80' alt='' data-uk-img>
@@ -83,8 +86,11 @@
                     <!-- grid khiếu nại và sidebar -->
                     <div class="uk-grid">
                     <div class="uk-grid-large uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
-                        <div class="uk-width-2-3 uk-width-expand@m">                            
+                        <div class="uk-width-2-3">                            
                             <div class="uk-card uk-card-default uk-card-small">
+                                <header class='uk-text-center'>
+                                    <h4><?=$page->contact_page_claim->headline?></h4>
+                                </header>
                                 <div class="uk-card-body uk-text-center">
                                     <img class="uk-border-circle uk-margin-small-top uk-margin-remove-bottom" src="<?=getImageUrlFromImages($page, $page->contact_page_claim->image_name)?>" data-src="<?=getImageUrlFromImages($page, $page->contact_page_claim->image_name)?>" width="160" height="160" alt="" data-uk-img>                                            
                                     <div class="uk-flex uk-flex-center">
