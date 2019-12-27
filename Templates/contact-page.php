@@ -15,6 +15,7 @@
                             $out = '';
                             $deptImageLink = '';
                             $personImageLink = '';
+                            $addressData = '';
                             foreach ($page->field_repeater_matrix as $item) {
                                 if($item->type == 'contact_dept') {
                                     if ($item->images->count())
@@ -22,6 +23,18 @@
                                         $deptImageLink = getImageUrlFromImageArr($item->images, $item->contact_dept_image_name);
                                         $personImageLink  = getImageUrlFromImageArr($item->images, $item->contact_dept_person_image_name);
 
+
+                                    }
+                                    $addressData = '';
+                                    if (strlen($item->address_text))
+                                    {
+                                        $addressData = " <div class='in-custom-icon-button small'>
+                                        <span class='uk-icon-button' data-uk-icon='icon:fa-map-marker-alt; ratio: 0.028'></span>
+                                        </div>
+                                        <div class='uk-margin-small-left' data-uk-lightbox>
+                                            <p>$item->address_text <a href='$item->address_google_data'
+                                                data-caption='Google Maps' data-type='iframe'><span class='uk-label uk-margin-small-left'>Xem Bản Đồ</span></a></p>
+                                        </div>";
                                     }
                                     $out .= "<div>
                                         <div class='uk-card uk-card-default uk-card-small'>
@@ -63,13 +76,7 @@
                                                     </div>
                                                 </div>
                                                 <div class='uk-flex'>
-                                                    <div class='in-custom-icon-button small'>
-                                                        <span class='uk-icon-button' data-uk-icon='icon:fa-map-marker-alt; ratio: 0.028'></span>
-                                                    </div>
-                                                    <div class='uk-margin-small-left' data-uk-lightbox>
-                                                        <p>$item->address_text <a href='$item->address_google_data'
-                                                            data-caption='Google Maps' data-type='iframe'><span class='uk-label uk-margin-small-left'>Xem Bản Đồ</span></a></p>
-                                                    </div>
+                                                   $addressData
                                                 </div>
                                             </footer>
                                         </div>
@@ -86,7 +93,7 @@
                     <!-- grid khiếu nại và sidebar -->
                     <div class="uk-grid">
                     <div class="uk-grid-large uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
-                        <div class="uk-width-2-3">                            
+                        <div class="uk-width-1-1 uk-width-2-3@m">                            
                             <div class="uk-card uk-card-default uk-card-small">
                                 <header class='uk-text-center'>
                                     <h4><?=$page->contact_page_claim->headline?></h4>
@@ -112,7 +119,7 @@
                             </div>
                         </div>
                     
-                        <div class="uk-width-1-3 uk-width-expand@m">
+                        <div class="uk-width-1-1 uk-width-expand@m">
                         <?=$page->sidebar?>
                         </div>
                     </div>                      
