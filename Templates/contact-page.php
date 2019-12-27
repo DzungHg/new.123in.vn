@@ -1,4 +1,5 @@
-<?php namespace ProcessWire; ?>
+<?php namespace ProcessWire; 
+?>
 
 <pw-region id="page-content">
 <main>    
@@ -7,74 +8,110 @@
                     <!-- breadcrumb content begin -->
                     <?php include("./blocks/_page-breadcrumb.php"); ?>
                     <!-- breadcrumb content end -->
-                    <!-- grid content begin -->
+                     <!-- grid liên hệ các bộ phận -->
                     <div class="uk-grid">    
-                    <div class="uk-width-1-1 uk-width-3-5@m">
-                            <p><?=$page->body?></p>
-                            <div class="uk-grid-divider uk-child-width-1-1 uk-child-width-1-2@m uk-margin-medium-top uk-margin-bottom" data-uk-grid>
-                                <div>
-                                    <h4><?=$page->contact_page_contact_part->title_01?></h4>
-                                    <p><?=$page->contact_page_contact_part->content_01?></p>
-                                    <div class="uk-flex">
-                                        <div class="in-custom-icon-button small">
-                                            <span class="uk-icon-button" data-uk-icon="icon:fa-envelope; ratio: 0.028"></span>
+                        <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-3@m uk-margin-small-bottom" data-uk-grid>
+                            <?php
+                            $out = '';
+                            $deptImageLink = '';
+                            $personImageLink = '';
+                            foreach ($page->field_repeater_matrix as $item) {
+                                if($item->type == 'contact_dept') {
+                                    if ($item->images->count())
+                                    {
+                                        $deptImageLink = getImageUrlFromImageArr($item->images, $item->contact_dept_image_name);
+                                        $personImageLink  = getImageUrlFromImageArr($item->images, $item->contact_dept_person_image_name);
+
+                                    }
+                                    $out .= "<div>
+                                        <div class='uk-card uk-card-default uk-card-small'>
+                                            <div class='uk-card-media-top'>
+                                                <img class='uk-margin-small-top uk-margin-remove-bottom' src='$deptImageLink' data-src='$deptImageLink' alt='dept' data-uk-img>
+                                            </div>
+                                            <div class='uk-card-body uk-text-left'>                                          
+                                                $item->text_area_ck
+                                            </div>                                        
+                                            <div class='uk-card-footer'>
+                                                <header class='uk-text-center' >
+                                                    <h4>Người nhận thông tin</h4>
+                                                    <div class='uk-card-media-top'>
+                                                        <img class='uk-border-circle uk-margin-small-top uk-margin-remove-bottom' src='$personImageLink' data-src='$personImageLink' width='80' height='80' alt='' data-uk-img>
+                                                    </div> 
+                                                </header>
+                                                <div class='uk-card-body uk-text-center'>                                                    
+                                                    <p>$item->contact_dept_person_name</p>
+                                                </div>
+                                            </div>                                                                                                                                                                       
+                                            <footer class='uk-card-footer'>
+                                                <div class='uk-flex'>
+                                                    <div class='in-custom-icon-button small'>
+                                                        <span class='uk-icon-button' data-uk-icon='icon:fa-phone; ratio: 0.028'></span>
+                                                    </div>
+                                                    <div class='uk-margin-small-left'>
+                                                        <p>$item->telephone</p>
+                                                    </div>
+                                                </div>
+                                                <div class='uk-flex'>
+                                                    <div class='in-custom-icon-button small'>
+                                                        <span class='uk-icon-button' data-uk-icon='icon:fa-envelope; ratio: 0.028'></span>
+                                                    </div>
+                                                    <div class='uk-margin-small-left'>
+                                                        <p>$item->email</p>
+                                                    </div>
+                                                </div>
+                                                <div class='uk-flex'>
+                                                    <div class='in-custom-icon-button small'>
+                                                        <span class='uk-icon-button' data-uk-icon='icon:fa-map-marker-alt; ratio: 0.028'></span>
+                                                    </div>
+                                                    <div class='uk-margin-small-left' data-uk-lightbox>
+                                                        <p>$item->address_text <a href='$item->address_google_data'
+                                                            data-caption='Google Maps' data-type='iframe'><span class='uk-label uk-margin-small-left'>Xem Bản Đồ</span></a></p>
+                                                    </div>
+                                                </div>
+                                            </footer>
                                         </div>
-                                        <div class="uk-margin-small-left">
-                                            <p><?=$page->contact_page_contact_part->email_01?></p>
-                                        </div>
-                                    </div>
-                                    <div class="uk-flex">
-                                        <div class="in-custom-icon-button small">
-                                            <span class="uk-icon-button" data-uk-icon="icon:fa-phone; ratio: 0.028"></span>
-                                        </div>
-                                        <div class="uk-margin-small-left">
-                                            <p><?=$page->contact_page_contact_part->telephone_01?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4><?=$page->contact_page_contact_part->title_02?></h4>
-                                    <p><?=$page->contact_page_contact_part->content_02?></p>
-                                    <div class="uk-flex">
-                                        <div class="in-custom-icon-button small">
-                                            <span class="uk-icon-button" data-uk-icon="icon:fa-envelope; ratio: 0.028"></span>
-                                        </div>
-                                        <div class="uk-margin-small-left">
-                                            <p><?=$page->contact_page_contact_part->email_02?></p>
-                                        </div>
-                                    </div>
-                                    <div class="uk-flex">
-                                        <div class="in-custom-icon-button small">
-                                            <span class="uk-icon-button" data-uk-icon="icon:fa-phone; ratio: 0.028"></span>
-                                        </div>
-                                        <div class="uk-margin-small-left">
-                                            <p><?=$page->contact_page_contact_part->telephone_02?></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4>Địa chỉ liên hệ</h4>
-                            <div class="uk-flex">
-                                <div class="in-custom-icon-button small">
-                                    <span class="uk-icon-button" data-uk-icon="icon:fa-map-marker-alt; ratio: 0.028"></span>
-                                </div>
-                                <div class="uk-margin-small-left" data-uk-lightbox>
-                                    <p><?=$page->contact_page_address->address?> <a href="<?=$page->contact_page_address->url_google_map?>"
-                                        data-caption="Google Maps" data-type="iframe"><span class="uk-label uk-margin-small-left">Xem trên bản đồ</span></a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-width-1-1 uk-width-expand@m">
-                            <div class="in-colored-card grey">
-                                <div class="uk-card uk-card-default">
-                                    <div class="uk-card-body">
-                                    <?php echo $forms->render('lien-he'); ?>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div>";
+                                }
+                            }
+                            echo $out;
+                            ?>
+                            
                         </div>
                     </div>
-                    <!-- grid content end -->
+                    <!-- Hết liên hệ các bộ phận -->   
+                        
+                    <!-- grid khiếu nại và sidebar -->
+                    <div class="uk-grid">
+                    <div class="uk-grid-large uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
+                        <div class="uk-width-2-3 uk-width-expand@m">                            
+                            <div class="uk-card uk-card-default uk-card-small">
+                                <div class="uk-card-body uk-text-center">
+                                    <img class="uk-border-circle uk-margin-small-top uk-margin-remove-bottom" src="<?=getImageUrlFromImages($page, $page->contact_page_claim->image_name)?>" data-src="<?=getImageUrlFromImages($page, $page->contact_page_claim->image_name)?>" width="160" height="160" alt="" data-uk-img>                                            
+                                    <div class="uk-flex uk-flex-center">
+                                        <div class="in-custom-icon-button small">
+                                            <span class="uk-icon-button" data-uk-icon="icon:fa-phone; ratio: 0.028"></span>
+                                        </div>
+                                        <div class="uk-margin-small-center">
+                                            <p><?=$page->contact_page_claim->telephone?> <span><?=$page->contact_page_claim->contact_name?></span></p>
+                                        </div>                                                                                                                                                                         
+                                    </div>
+                                </div>
+                                <footer class="uk-card-footer uk-text-center">
+                                    <div class="uk-flex-center uk-margin-remove-top uk-margin-small-bottom">
+                                        <a href="<?=$page->contact_page_claim->facebook_link?>" class="uk-margin-small-right" data-uk-icon="icon: facebook"></a>
+                                        <a href="#" class="uk-margin-small-right" data-uk-icon="icon: linkedin"></a>                            
+                                        <a href="#" class="uk-margin-small-right" data-uk-icon="icon: twitter"></a>
+                                    </div>           
+                                </footer>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-1-3 uk-width-expand@m">
+                        <?=$page->sidebar?>
+                        </div>
+                    </div>                      
+                </div>
+                    <!-- Hết grid khiếu nại và sidebar -->                   
                                   
          </div>
       </div>

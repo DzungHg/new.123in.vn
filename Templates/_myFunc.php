@@ -244,6 +244,20 @@ function vcRenderPrintProductItemCard(PageArray $items)
 /*
 Tim trả lại link image trong 1 image aray
  */
+function getImageUrlFromImageArr($images, $imageName)
+{
+    $out = '';
+    if (!$images->count() || trim($imageName) == "") {
+        return '';
+    }
+    foreach ($images as $image) {
+        if ($image->basename == trim($imageName)) {
+            $out .= $image->url;
+            break;
+        }
+    }
+    return $out;
+}
 function getImageUrlFromImages(Page $page, $imageName)
 {
     $out = '';
@@ -258,6 +272,7 @@ function getImageUrlFromImages(Page $page, $imageName)
     }
     return $out;
 }
+
 /*
 Đường dẫn tới Asset là thư mục style
  */
