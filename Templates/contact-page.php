@@ -98,7 +98,7 @@
                     <div class="uk-grid-large uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
                         <div class="uk-width-1-1 uk-width-2-3@m">                            
                             <div class="uk-card uk-card-default uk-card-small">
-                                <header class='uk-text-center'>
+                                <header class='uk-text-center uk-margin-small-top'>
                                     <h4><?=$page->contact_page_claim->headline?></h4>
                                 </header>
                                 <div class="uk-card-body uk-text-center">
