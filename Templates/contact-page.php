@@ -18,6 +18,8 @@
                             $addressData = '';
                             foreach ($page->field_repeater_matrix as $item) {
                                 if($item->type == 'contact_dept') {
+                                    $deptImageLink = '';
+                                    $personImageLink = '';
                                     if ($item->images->count())
                                     {
                                         $deptImageLink = getImageUrlFromImageArr($item->images, $item->contact_dept_image_name);
@@ -39,8 +41,9 @@
                                     $out .= "<div>
                                         <div class='uk-card uk-card-default uk-card-small'>
                                             <header class='uk-text-center'>
-                                                <h4>$item->headline</h4>
-                                                <div class='uk-card-media-top'>
+                                                <div class='uk-card-media-top uk-margin-small-top'>
+                                                    <h4>$item->headline</h4>
+
                                                     <img class='uk-margin-small-top uk-margin-remove-bottom' src='$deptImageLink' data-src='$deptImageLink' alt='dept' data-uk-img>
                                                 </div>
                                             </header>
