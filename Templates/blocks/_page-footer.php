@@ -12,7 +12,7 @@
                     </div>
                     <div class="uk-width-1-2 uk-visible@m">
                         <div class="in-footer-socials uk-flex uk-flex-right">                        
-                            <a href="#" class="uk-margin-small-right" data-uk-icon="icon: facebook; ratio: 0.8"></a>
+                            <a href="<?='https://facebook.com/'.$pageSettings->setting_facebook_name?>" class="uk-margin-small-right" data-uk-icon="icon: facebook; ratio: 0.8"></a>
                             <a href="#" class="uk-margin-small-right" data-uk-icon="icon: twitter; ratio: 0.8"></a>
                             <a href="#" class="uk-margin-small-right" data-uk-icon="icon: linkedin; ratio: 0.8"></a>
                             <span class="uk-label"><span class="uk-margin-small-right" data-uk-icon="icon:fa-envelope; ratio: .024"></span><?=$pageSettings->setting_address->email?></span>
