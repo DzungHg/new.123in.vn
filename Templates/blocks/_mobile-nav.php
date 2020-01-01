@@ -25,7 +25,7 @@
                                             </li>
                                             <li class="uk-parent"><a href="#">Tài Nguyên</a>
                                                 <ul class="uk-nav-sub">
-                                                  
+                                                <li><a href="https://kti.123in.vn/">Kiến Thức Về In Ấn</a></li>  
                                                 <li><a href="/tai-nguyen/qua-trinh-phat-trien">Quá Trình Phát Triển</a></li>
                                                 <li><a href="/tai-nguyen/ho-so-nang-luc">Hồ Sơ Năng Lực</a></li>  
                                                 </ul>

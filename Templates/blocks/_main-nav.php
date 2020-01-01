@@ -29,7 +29,7 @@
                                                 <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
                                                     <div>
                                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                           
+                                                            <li><a href="https://kti.123in.vn/">Kiến Thức Về In Ấn</a></li>
                                                             <li><a href="/tai-nguyen/qua-trinh-phat-trien">Quá Trình Phát Triển</a></li>
                                                             <li><a href="/tai-nguyen/ho-so-nang-luc">Hồ Sơ Năng Lực</a></li>
                                                         </ul>
