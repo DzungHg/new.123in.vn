@@ -67,7 +67,7 @@
                                                         <span class='uk-icon-button' data-uk-icon='icon:fa-phone; ratio: 0.028'></span>
                                                     </div>
                                                     <div class='uk-margin-small-left'>
-                                                        <p>$item->telephone</p>
+                                                        <p><a href='tel:$item->telephone'>$item->telephone</a></p>
                                                     </div>
                                                 </div>
                                                 <div class='uk-flex'>
@@ -75,7 +75,7 @@
                                                         <span class='uk-icon-button' data-uk-icon='icon:fa-envelope; ratio: 0.028'></span>
                                                     </div>
                                                     <div class='uk-margin-small-left'>
-                                                        <p>$item->email</p>
+                                                        <p><a href='mailto:$item->email'>$item->email</a></p>
                                                     </div>
                                                 </div>
                                                 <div class='uk-flex'>
@@ -108,7 +108,7 @@
                                             <span class="uk-icon-button" data-uk-icon="icon:fa-phone; ratio: 0.028"></span>
                                         </div>
                                         <div class="uk-margin-small-center">
-                                            <p><?=$page->contact_page_claim->telephone?> <span><?=$page->contact_page_claim->contact_name?></span></p>
+                                            <p><a href='tel:<?=$page->contact_page_claim->telephone?>'><?=$page->contact_page_claim->telephone?></a> <span><?=$page->contact_page_claim->contact_name?></span></p>
                                         </div>                                                                                                                                                                         
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                         </div>
                     
                         <div class="uk-width-1-1 uk-width-expand@m">
-                        <?=$page->sidebar?>
+                            <?=$page->sidebar?>
                         </div>
                     </div>                      
                 </div>
