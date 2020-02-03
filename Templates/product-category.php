@@ -12,16 +12,16 @@
                     <div class="uk-width-1-1 uk-width-2-3@m">
                      <?php
                        
-                       $posts = pages()->get('/san-pham/')->children("categories=$page, limit=10");
+                       $products = pages()->get('/san-pham/')->children("product_categories=$page, limit=10");
                         
                         //echo ukBlogPosts($posts); //Hoạt động tốt
-                        echo vcRenderBlogs($posts); 
+                        echo vcRenderProducts($products); 
                         ?>
                          <hr class="uk-margin-large-top">
                         <!-- pagination -->
                         <?php
                         //$posts = page()->children('limit=10');
-                        echo $posts->renderPager(array(
+                        echo $products->renderPager(array(
                            'nextItemLabel' => "Next",
                            'previousItemLabel' => "Prev",
                            'listMarkup' => "<ul class='uk-pagination'>{out}</ul>",
@@ -39,7 +39,7 @@
                                         <ul class="uk-list uk-list-divider in-widget-category">
                                             <?php //Nếu có trang con thì list
                                             $out = '';
-                                            $categories = pages()->get('/categories/');
+                                            $categories = pages()->get('/danh-muc-san-pham/');
                                             foreach ($categories->children() as $item)
                                             {
                                                 $out .= "<li><a href='$item->url'>$item->title<span class='uk-float-right' data-uk-icon='icon: triangle-right; ratio: 0.9'></span></a></li>";   

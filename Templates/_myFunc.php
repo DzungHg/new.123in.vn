@@ -9,6 +9,54 @@ namespace ProcessWire;
 
 /** @var ProcessWire $wire */
 /**
+ * Render blog
+ */
+function vcRenderProducts(PageArray $products)
+{
+    $out = '';
+    $headImageLink = '';    
+    $bodyTeasing = '';
+    $catesOut = '';
+
+    foreach ($products as $product)
+    {
+        if(!$products->count) {
+            if(input()->pageNum > 1) {
+                // redirect to first pagination if accessed at an out-of-bounds pagination
+                session()->redirect(page()->url);
+            }
+            return '';
+        }
+        if ($product->images->first())
+        {
+            $headImageLink = $product->images->first()->url;
+        }
+
+        $bodyTeasing = explode('</p>', $product->body); //Tách các đoạn thành bản dãy
+        $bodyTeasing = reset($bodyTeasing) . ' '; //Lấy item đầu tiên của bản dãy
+        
+        $catesOut = $product->get('product_categories')->each( 
+		"<a class='uk-button uk-button-text' href='{url}'><span class='uk-label uk-label-warning uk-visible@m'>{title}</span></a>"
+	    );
+
+        $out .= "  <article class='uk-article in-blog'>
+        <p class='uk-article-meta'>$catesOut</p>
+        <h3 class='uk-article-title uk-margin-small-top'><a class='uk-link-reset' href='$product->url'>$product->title</a></h3>
+        <img class='uk-margin-bottom' src='$headImageLink' data-src='$headImageLink' alt='' data-width data-height data-uk-img>
+        <div class='uk-margin-large-left'>
+            <p>$bodyTeasing.</p>
+            <div>
+                <a href='$product->url' class='uk-button uk-button-link uk-margin-right'>Chi tiết ... <span data-uk-icon='icon: fa-arrow-right; ratio: 0.027'></span></a>
+            </div>
+        </div>
+        </article>";
+       
+    
+    }
+
+    return $out;
+}
+/**
  * Render danh sách blog tại trang blog
  * $pageLimit là số blog hiển thị trên trang sau
  */

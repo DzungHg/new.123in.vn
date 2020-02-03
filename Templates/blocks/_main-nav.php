@@ -3,9 +3,12 @@
                                     <ul class="uk-navbar-nav">
                                         <li>
                                             <a href="/">Trang Chủ</a>
-                                        </li>
+                                        </li>                                        
                                         <li>
                                             <a href="/dich-vu">Dịch Vụ</a>
+                                        </li>
+                                        <li>
+                                            <a href="/san-pham">Sản Phẩm In</a>
                                         </li>
                                         <li>
                                             <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">123in</a>

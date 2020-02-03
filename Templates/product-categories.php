@@ -14,7 +14,7 @@
                            <a class='uk-link-reset' href='<?= $category->url ?>'>
                               <div class='uk-card uk-card-default uk-card-hover uk-card-body'>
                                  <h3 class='uk-card-title uk-margin-remove'><?= $category->title ?></h3>
-                                 <span class='uk-text-muted'><?= $category->numPosts(true) ?></span>
+                                 <span class='uk-text-muted'><?= //$category->numPosts(true) ?></span>
                               </div>
                            </a>
                         <?php endforeach; ?>
@@ -24,14 +24,14 @@
                             <aside class="in-blog-sidebar uk-margin-medium-bottom">
                               <div class="uk-card uk-card-default">
                                  <div class="uk-card-body">
-                                    <h5 class="uk-text-uppercase uk-margin-remove-bottom">POST GẦN ĐÂY</h5>
+                                    <h5 class="uk-text-uppercase uk-margin-remove-bottom">SẢN PHẨM THÊM GẦN ĐÂY</h5>
                                     <ul class="uk-list uk-list-divider in-widget-archive">
                                        <?php
-                                       $posts = pages()->get('/san-pham/')->children('limit=3');
+                                       $products = pages()->get('/san-pham/')->children('limit=3');
                                        $out = '';
-                                       foreach ($posts as $post)
+                                       foreach ($products as $product)
                                        {
-                                          $out .= "<li><a href='$post->url'>$post->title</a></li>";
+                                          $out .= "<li><a href='$product->url'>$product->title</a></li>";
                                        }
                                        echo $out;
                                         ?>                                          

@@ -12,10 +12,10 @@
                     <div class="uk-width-1-1 uk-width-2-3@m">
                         <?php
                        
-                        $posts = page()->children('limit=10');
+                        $sanPhams = page()->children('limit=10');
                         
                         //echo ukBlogPosts($posts); //Hoạt động tốt
-                        echo vcRenderBlogs($posts); //Chưa có cate nào chọn
+                        echo vcRenderProducts($sanPhams); //Chưa có cate nào chọn
                         ?>
                         <hr class="uk-margin-large-top">
                         <!-- pagination -->
@@ -49,7 +49,7 @@
                                         <ul class="uk-list uk-list-divider in-widget-category">
                                             <?php 
                                             $out = '';
-                                            $categories = pages()->get('/product-categories/');
+                                            $categories = pages()->get('/danh-muc-san-pham/');
                                             foreach ($categories->children() as $item)
                                             {
                                                 $out .= "<li><a href='$item->url'>$item->title<span class='uk-float-right' data-uk-icon='icon: triangle-right; ratio: 0.9'></span></a></li>";   

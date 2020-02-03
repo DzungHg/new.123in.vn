@@ -10,59 +10,87 @@
                     <!-- grid content begin -->
                     <div class="uk-grid" data-uk-grid>    
                         <div class="uk-width-1-1 uk-width-2-3@m">
+                            <div class="tw-element tw-gallery-masonry tw-isotope-container" data-isotope-item=".gallery-item">
+                                    <div class="isotope-container uk-grid-xsmall uk-child-width-1-1" data-uk-grid>
+                                        <div class="gallery-item">
+                                            <div class="gallery-image">
+                                                <a href="#modal-gallery" class="tw-image-hover" uk-toggle>
+                                                    <img src="demo/portfolio/single-3/portfolio-single3-image.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <div class="gallery-image">
+                                                <a href="#modal-gallery" class="tw-image-hover" uk-toggle>
+                                                    <img src="demo/portfolio/single-3/portfolio-single3-image2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <div class="gallery-image">
+                                                <a href="#modal-gallery-3" class="tw-image-hover" uk-toggle>
+                                                    <img src="demo/portfolio/single-3/portfolio-single3-image3.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="grid-sizer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="uk-width-expand">
+                        <div class="portfolio-single-title">
                             <?php
-                                $cateOut= '';
-                                $catesOut = $page->get('categories')->each( 
+                                $catesOut= '';
+                                $catesOut = $page->get('product_categories')->each( 
                                 "<a class='uk-button uk-button-text' href='{url}'><span class='uk-label uk-label-warning uk-visible@m'>{title}</span></a>"
                                 );
+
+                                $allProdCatesOut = '';
+                                $allProdCatesOut = pages()->get('/danh-muc-san-pham/')->children()->each( 
+                                    "<a class='uk-button uk-button-text' href='{url}'><span class='uk-label uk-label-warning uk-visible@m'>{title}</span></a>"
+                                    );
+
                                 $imageLink = '';
                                 if ($page->images->count())
                                 {
                                     $imangeLink = $page->images->first()->url;
-                                }
-
-                             ?>
-                            <article class="uk-article in-blog">
-                                
-                            <p class="uk-article-meta"><span class="uk-label uk-label-warning uk-visible@m"><?=$catesOut?> </span> <?=$page->date?> &nbsp;&nbsp; | &nbsp;&nbsp; Bởi <a href="">123in</a></p>
-                            <h3 class="uk-article-title uk-margin-small-top"><a class="uk-link-reset" href="<?=$page->urrl?>"><?=$page->title?></a></h3>
-                            <img class="uk-margin-bottom" src="<?=$imangeLink?>" data-src="<?=$imangeLink?>" alt="" data-width data-height data-uk-img>
-                            <div class="uk-margin-large-left">
-                                <div class="uk-margin-small-bottom">
-                                    <a href="" class="uk-icon-button twitter uk-margin-small-right" data-uk-icon="icon: twitter"></a>
-                                    <a href="" class="uk-icon-button facebook uk-margin-small-right" data-uk-icon="icon: facebook"></a>
-                                    <a href="" class="uk-icon-button linkedin uk-margin-small-right" data-uk-icon="icon: linkedin"></a>
-                                    <a href="" class="uk-icon-button" data-uk-icon="icon: fa-envelope; ratio: 0.028"></a>
+                                } ?>
+                                <h1 class="portfolio-title"><?=$page->title?></h1>
+                                <div class="portfolio-cats tw-meta"><?=$catesOut?></div>
                                 </div>
-                                <?=$page->body?>
+                            <div class="portfolio-single-content">
+                                    <?=page()->body?>
                             </div>
-                            </article>
+                                <ul class="portfolio-single-meta">                                    
+                                    <li>
+                                        <h3 class="portfolio-subtitle">Danh Mục</h3>
+                                        <div class="portfolio-meta"><?=$allProdCatesOut?></div>
+                                    </li>
+                                    <li>
+                                        <h3 class="portfolio-subtitle">Chia sẻ</h3>
+                                        <div class="portfolio-meta"><a href="#">Facebook, Twitter, Instagram</a></div>
+                                    </li>
+                                </ul>
+                                <a href="#" class="uk-button uk-button-radius uk-button-default portfolio-btn tw-hover"><span class="tw-hover-inner"><span>Kêu gọi gì đó</span><i class="ion-ios-arrow-thin-right"></i></span></a>
+                            </div>
                         </div>
-                        <div class="uk-width-1-1 uk-width-1-3@m in-margin-large-top@s">
-                            <!-- sidebar danh mục  -->
-                            <aside class="in-blog-sidebar uk-margin-medium-bottom">
-                                <div class="uk-card uk-card-default">
-                                    <div class="uk-card-body">
-                                        <h5 class="uk-text-uppercase uk-margin-remove-bottom">Danh mục</h5>
-                                        <ul class="uk-list uk-list-divider in-widget-category">
-                                            <?php //Nếu có trang con thì list
-                                            $out = '';
-                                            $categories = pages()->get('/categories/');
-                                            foreach ($categories->children() as $item)
-                                            {
-                                                $out .= "<li><a href='$item->url'>$item->title<span class='uk-float-right' data-uk-icon='icon: triangle-right; ratio: 0.9'></span></a></li>";   
-                                            }
-                                            
-                                            echo $out;
-                                            ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </aside>
-                            <!--sidebar danh mục hết -->
+                    <!-- grid content end -->
+                    <!-- phần dành cho view hình to ở trên render theo số hình rở trên-->
+                    <div id="modal-gallery" class="uk-modal-full" uk-modal="center: true">
+                        <div class="uk-modal-dialog">
+                            <button class="uk-modal-close-full" type="button" uk-close></button>
+                            <img src="demo/fullpage-5.jpg" alt=""> <!--chuyển cho nó 1 hình tương ứng chỗ bấm ra sao?-->
+                            
                         </div>
                     </div>
-                    <!-- grid content end -->
+                    <div id="modal-gallery-3" class="uk-modal-full" uk-modal="center: true">
+                        <div class="uk-modal-dialog">
+                            <button class="uk-modal-close-full" type="button" uk-close></button>
+                            <img src="demo/fullpage-4.jpg" alt=""> <!--chuyển cho nó 1 hình tương ứng chỗ bấm ra sao?-->
+                            
+                        </div>
+                    </div>
+                    <!-- phần dành cho view hình to ở trên render theo số hình rở trên-->
                                   
          </div>
       </div>
