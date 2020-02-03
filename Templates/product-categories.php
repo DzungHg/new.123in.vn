@@ -14,7 +14,7 @@
                            <a class='uk-link-reset' href='<?= $category->url ?>'>
                               <div class='uk-card uk-card-default uk-card-hover uk-card-body'>
                                  <h3 class='uk-card-title uk-margin-remove'><?= $category->title ?></h3>
-                                 <span class='uk-text-muted'><?= //$category->numPosts(true) ?></span>
+                                 <span class='uk-text-muted'><?="" //$category->numPosts(true) ?></span>
                               </div>
                            </a>
                         <?php endforeach; ?>

@@ -20,9 +20,9 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <!--<li>
                                             <a href="https://shop.123in.vn" target="_blank">Shop Online</a>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a href="/blog">Blog</a>
                                         </li>

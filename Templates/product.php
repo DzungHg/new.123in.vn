@@ -21,7 +21,7 @@
                         <!-- pagination -->
                         <?php
                         //$posts = page()->children('limit=10');
-                        echo $posts->renderPager(array(
+                        echo $sanPhams->renderPager(array(
                            'nextItemLabel' => "Next",
                            'previousItemLabel' => "Prev",
                            'listMarkup' => "<ul class='uk-pagination'>{out}</ul>",
@@ -45,7 +45,7 @@
                              <aside class="in-blog-sidebar uk-margin-medium-bottom">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
-                                        <h5 class="uk-text-uppercase uk-margin-remove-bottom">D. mục S. Phẩm</h5>
+                                        <h5 class="uk-text-uppercase uk-margin-remove-bottom">Danh Mục</h5>
                                         <ul class="uk-list uk-list-divider in-widget-category">
                                             <?php 
                                             $out = '';

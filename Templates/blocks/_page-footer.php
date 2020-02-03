@@ -4,13 +4,23 @@
             <div class="uk-container">
                 <!-- footer content begin -->
                 <div class="uk-grid">
-                    <div class="uk-width-1-1 uk-width-1-2@m">
+                    <div class="uk-width-1-1 uk-width-1-3@m">
                         <div class="in-footer-logo">
                             <img src="<?=pathToAsset() ?>images/logo.svg" data-src="<?=pathToAsset() ?>images/logo.svg" width="125" height="12" alt="logo" data-uk-img>
                             <p><?=$pageSettings->setting_copy_right->text_line_part_01?> &copy; <?=$pageSettings->setting_copy_right->text_line_part_02?></p>
                         </div>               
                     </div>
-                    <div class="uk-width-1-2 uk-visible@m">
+                    <div class="uk-width-1-1 uk-width-1-3@m ">
+                        <div class="in-footer-socials uk-flex uk-flex-left">
+                            <h5>In Online</h5>
+                            <ul class="uk-list uk-link-text">
+                                <li><a href="https://shop.123in.vn" class="uk-margin-small-left"  target="_blank" >Shop In Online</a></li>
+                                <li><a href="https://online.sachanh.vn" class="uk-margin-small-left"  target="_blank" >Ảnh Online</a></li>
+                            </ul>                        
+                                                        
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-visible@m">
                         <div class="in-footer-socials uk-flex uk-flex-right">                        
                             <a href="<?='https://facebook.com/'.$pageSettings->setting_facebook_name?>" class="uk-margin-small-right" data-uk-icon="icon: facebook; ratio: 0.8"></a>
                             <a href="#" class="uk-margin-small-right" data-uk-icon="icon: twitter; ratio: 0.8"></a>
