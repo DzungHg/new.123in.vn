@@ -49,8 +49,9 @@
                                             ?>
                                         </ul>
                                     </div>
-                                </div>
+                                </div>                                
                             </aside>
+                            <div><?=$page->product_cate_cta_hana?></div>
                             <!-- side bar categories Hết -->
                             
                         </div>

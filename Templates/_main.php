@@ -19,12 +19,12 @@ urls()->set('jquery', 'wire/modules/Jquery/JqueryCore/JqueryCore.js');
 <head id='html-head'>
 	<!-- Standard Meta -->
     <meta charset="utf-8">
-    <meta name="mota" content="<?=page()->summary?>">
+    <meta name="description" content="<?=page()->meta_description?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#e47d2e"/> 
 	<!-- Standard Meta -->
  	<!-- Site Properties -->    
- 	<title><?=page()->title?></title>
+ 	<title><?=page()->meta_title?></title>
     <link rel="shortcut icon" href="<?=$urls->templates?>styles/images/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 	<!-- Site Properties --> 
