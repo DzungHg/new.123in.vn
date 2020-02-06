@@ -111,8 +111,8 @@
                             <!-- Hết: kêu gọi xem gì đó -->
                             <!-- form Tư vấn báo giá -->
                             <aside class="in-blog-sidebar uk-margin-medium-bottom">
-                                <h5 class='uk-text-uppercase uk-margin-remove-bottom'>Tư vấn - Báo Giá</h5>
-                                <?php echo $forms->embed('tu-van-bao-gia'); ?>
+                                <h5 class='uk-text-uppercase uk-margin-remove-bottom'>Liên hệ hợp tác</h5>
+                                <?=$page->service_cta_hana; ?>
                             </aside>
                             <!-- Hết form Tư vấn báo giá -->    
                                 
