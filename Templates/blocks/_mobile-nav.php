@@ -24,7 +24,7 @@
                                                 <a href="https://shop.123in.vn" target="_blank">Shop Online</a>
                                             </li> -->
                                             <li>
-                                            <a href="https://blog.123in.vn/">Blog</a>
+                                            <a href="/blog/">Blog</a>
                                             </li>
                                             <li class="uk-parent"><a href="#">Tài Nguyên</a>
                                                 <ul class="uk-nav-sub">
